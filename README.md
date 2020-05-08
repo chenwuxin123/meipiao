@@ -12,3 +12,10 @@
 * [FastJson的使用详解](https://www.jianshu.com/p/f20ffefeec4d)
 
 ⌘ps:其中Elasticsearch使用~~JestClient~~，推荐使用Spring Data Elasticsearch
+
+### Related configuration
+*swagger2*: ```.apis(RequestHandlerSelectors.basePackage("com.meipiao.statistics.controller"))```修改此处对应接口
+
+*RestTemplateConfig*: RestTemplate相关配置
+
+*CorsConfig*: 跨域配置
