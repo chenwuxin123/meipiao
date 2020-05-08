@@ -60,7 +60,18 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-
+        <!--elasticsearch-->
+        <dependency>
+            <groupId>io.searchbox</groupId>
+            <artifactId>jest</artifactId>
+            <version>6.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>7.3.0</version>
+            <scope>compile</scope>
+        </dependency>
         <!--swagger2-->
         <dependency>
             <groupId>io.springfox</groupId>
@@ -72,6 +83,8 @@
             <artifactId>swagger-models</artifactId>
             <version>1.5.22</version>
         </dependency>
+
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
