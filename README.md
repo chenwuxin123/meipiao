@@ -19,3 +19,9 @@
 *RestTemplateConfig*: RestTemplate相关配置
 
 *CorsConfig*: 跨域配置
+
+*RedisConfig+RedisUtil*: 修改RedisTemplate默认序列化+Redis工具类
+
+*Pagehelper*: 分页插件的使用
+
+*RabbitMQ*: [此demo单独开启，内附双数据源配置，点击跳转]()
