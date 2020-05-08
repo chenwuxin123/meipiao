@@ -26,5 +26,5 @@
 
 *ElasticsearchUtil*: Elasticsearch使用jestClient多条件的查询
 
-*RabbitMQ*: [此demo单独开启，内附双数据源配置，点击跳转]()
+*RabbitMQ*: [此demo单独开启，内附双数据源配置，点击跳转](https://github.com/chenwuxin123/listener)
 
