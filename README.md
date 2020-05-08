@@ -13,7 +13,7 @@
 
 ⌘ps:其中Elasticsearch使用~~JestClient~~，推荐使用Spring Data Elasticsearch
 
-### Related configuration
+### Related Configuration(Config)
 *swagger2*: ```.apis(RequestHandlerSelectors.basePackage("com.meipiao.statistics.controller"))```修改此处对应接口
 
 *RestTemplateConfig*: RestTemplate相关配置
