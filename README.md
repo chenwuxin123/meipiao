@@ -11,7 +11,7 @@
 * [支付服务：支付宝，微信，银联详细代码案例；支付API文档、持续更新中](https://gitee.com/52itstyle/spring-boot-pay)
 * [FastJson的使用详解](https://www.jianshu.com/p/f20ffefeec4d)
 
-⌘ps:其中Elasticsearch使用~~JestClient~~，推荐使用<font color="warning">Spring Data Elasticsearch</font>
+⌘ 其中Elasticsearch使用~~JestClient~~，推荐使用<font color="warning">Spring Data Elasticsearch</font>
 
 ### Related Configuration(Config)
 *swagger2*: ```.apis(RequestHandlerSelectors.basePackage("com.meipiao.statistics.controller"))```修改此处对应接口
@@ -57,4 +57,5 @@
          </dependency>
  `
 
- :o代码已迁至https://github.com/anylineorg/anyline
+   代码已迁至https://github.com/anylineorg/anyline
+   
