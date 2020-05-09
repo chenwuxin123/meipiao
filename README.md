@@ -35,15 +35,15 @@
 ### About pom.xml files
 <font color="warning">使用私人工具包，请添加镜像:</font>
 
- `   <mirror>
+ `<mirror>
  		<id>anyline</id>   
  		<mirrorOf>*</mirrorOf>   
  		<url>http://maven.anyline.org/repository/maven-public</url>   
  	</mirror> 
- `
- 
+`
+---
  <font color="warning">请添加pom依赖:</font>
- 
+---
  `
          <dependency>
              <groupId>org.anyline</groupId>
@@ -56,5 +56,5 @@
              <version>8.3.7-SNAPSHOT</version>
          </dependency>
  `
- 
- 代码已迁至https://github.com/anylineorg/anyline
+ ---
+ :o代码已迁至https://github.com/anylineorg/anyline
