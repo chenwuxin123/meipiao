@@ -1,6 +1,6 @@
 # CWX Study Manual 
 > (CWX的学习菜单)↩
-
+---
 ### Brief
 
  ⌦ *The amount of experience gained from work is also my first MD*
@@ -41,9 +41,9 @@
  		<url>http://maven.anyline.org/repository/maven-public</url>   
  	</mirror> 
 `
----
+
  <font color="warning">请添加pom依赖:</font>
----
+
  `
          <dependency>
              <groupId>org.anyline</groupId>
@@ -56,5 +56,5 @@
              <version>8.3.7-SNAPSHOT</version>
          </dependency>
  `
- ---
+
  :o代码已迁至https://github.com/anylineorg/anyline
