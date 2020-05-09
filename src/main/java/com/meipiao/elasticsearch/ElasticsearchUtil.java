@@ -1,4 +1,4 @@
-package com.meipiao.utils;
+package com.meipiao.elasticsearch;
 
 import io.searchbox.client.JestClient;
 import io.searchbox.core.Search;

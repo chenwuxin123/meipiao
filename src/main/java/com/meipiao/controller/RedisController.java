@@ -1,6 +1,6 @@
 package com.meipiao.controller;
 
-import com.meipiao.utils.RedisUtil;
+import com.meipiao.redis.RedisUtil;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

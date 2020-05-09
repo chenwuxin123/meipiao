@@ -1,4 +1,4 @@
-package com.meipiao.config;
+package com.meipiao.result;
 
 /**
  * @Author: Chenwx
