@@ -28,7 +28,14 @@
 
 *chat:* 企业微信
 
+*task:* 定时任务(**1.固定定时任务 2.可改变定时任务**)
+
 *result:* 统一返回结果
+
+*java8新特性:* [基础教学](https://www.runoob.com/java/java8-new-features.html)
+ - java8DateTime: 日期时间 API
+ - Lambda.java: Lambda表达式
+ - Java8Optional: Optional 实例
 
 *RabbitMQ*: [此demo单独开启，内附双数据源配置，点击跳转](https://github.com/chenwuxin123/listener)
 
