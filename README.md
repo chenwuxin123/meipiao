@@ -42,11 +42,12 @@
 ### About pom.xml files
 <font color="warning">使用私人工具包，请添加镜像:</font>
 
- ```<mirror>
- 		<id>anyline</id>   
- 		<mirrorOf>*</mirrorOf>   
- 		<url>http://maven.anyline.org/repository/maven-public</url>   
- 	</mirror> 
+ ```
+       <mirror>
+        <id>anyline</id>   
+        <mirrorOf>*</mirrorOf>   
+        <url>http://maven.anyline.org/repository/maven-public</url>   
+       </mirror> 
 ```
 
  <font color="warning">请添加pom依赖:</font>
