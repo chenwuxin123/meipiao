@@ -42,7 +42,7 @@ public class MobileQuery {
     }
 
     public static void main(String[] args) {
-
+        mobileQuery();
     }
 
     /**

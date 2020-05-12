@@ -95,7 +95,6 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.58</version>
         </dependency>
-
         <!--anyline工具包-->
         <dependency>
             <groupId>org.anyline</groupId>
