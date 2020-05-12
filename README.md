@@ -30,6 +30,8 @@
 
 *task:* 定时任务(**1.固定定时任务 2.可改变定时任务**)
 
+*http:* httpclient的使用 （手机归属地api）
+
 *result:* 统一返回结果
 
 *java8新特性:* [基础教学](https://www.runoob.com/java/java8-new-features.html)
