@@ -1,6 +1,8 @@
 package com.meipiao.java8;
 
 
+import java.util.ArrayList;
+
 /**
  * Lambda 表达式的使用
  *
@@ -29,6 +31,16 @@ public class Lambda {
         };
         String info = greetingService.getCount(18);
         System.out.println("返回的数据为:" + info);
+
+        //使用forEach遍历数组
+        ArrayList<String> list = new ArrayList<>();
+        list.add("aa");
+        list.add("bb");
+        list.add("cc");
+        list.add("dd");
+        list.forEach((item)-> {
+            System.out.println("我是forEach遍历出来的元素:"+item);
+        });
     }
 }
 
