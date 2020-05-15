@@ -74,6 +74,7 @@
 
    
 ### About Intllij IDEA use tools
+```
 --Easy Code:生成 controller/service/dao 
 --Lombok plugin
 --Rainbow Brackets:彩虹括号
@@ -81,3 +82,4 @@
 --Free Mybatis plugin:dao层xml跳转
 --RestfulToolkit:测试接口请求
 --GsonFormat:JSON转化成bean
+```
