@@ -74,6 +74,12 @@ public class MobileQuery {
             conn.setConnectTimeout(DEF_CONN_TIMEOUT);
             conn.setReadTimeout(DEF_READ_TIMEOUT);
             conn.setInstanceFollowRedirects(false);
+/*            设置请求头
+            conn.setRequestProperty("Charsert", "UTF-8");
+            conn.setRequestProperty("Content-Type", "application/json; charset=UTF-8");//设置参数类型是json格式
+            conn.setRequestProperty("Connection", "Keep-Alive");
+            conn.setRequestProperty("logType", "base");
+*/
             conn.connect();
             if (params != null && method.equals("POST")) {
                 try {
