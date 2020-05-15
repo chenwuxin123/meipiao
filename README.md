@@ -38,6 +38,9 @@
  - java8DateTime: 日期时间 API
  - Lambda.java: Lambda表达式
  - Java8Optional: Optional 实例
+ 
+ *ThreadPoolTaskScheduler:* 线程池定时任务 ThreadPoolConfig(线程池配置),测试demo（DynamicTaskController） 
+ >在关闭线程时，需把每个future放入集合，统一接口进行关闭
 
 *RabbitMQ*: [此demo单独开启，内附双数据源配置，点击跳转](https://github.com/chenwuxin123/listener)
 
@@ -70,3 +73,13 @@
    代码已迁至https://github.com/anylineorg/anyline
 
    
+### About Intllij IDEA use tools
+```
+--Easy Code:生成 controller/service/dao 
+--Lombok plugin
+--Rainbow Brackets:彩虹括号
+--Translation:翻译
+--Free Mybatis plugin:dao层xml跳转
+--RestfulToolkit:测试接口请求
+--GsonFormat:JSON转化成bean
+```
