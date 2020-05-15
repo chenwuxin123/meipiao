@@ -40,7 +40,7 @@
  - Java8Optional: Optional 实例
  
  *ThreadPoolTaskScheduler:* 线程池定时任务 ThreadPoolConfig(线程池配置),测试demo（DynamicTaskController） 
- _在关闭线程是，需把每个future放入集合，统一接口进行关闭
+ >在关闭线程时，需把每个future放入集合，统一接口进行关闭
 
 *RabbitMQ*: [此demo单独开启，内附双数据源配置，点击跳转](https://github.com/chenwuxin123/listener)
 
