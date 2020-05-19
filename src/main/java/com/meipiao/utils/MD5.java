@@ -66,7 +66,7 @@ public class MD5 {
         String data  = "{\"Version\":\"1.28\",\"Local\":\"zh_CN\",\"Request{\"ArrivalDate\":\"2017-03-16\",\n" +
                 "\n" +
                 "\"DepartureDate\":\"2017-03-17\",\"CityId\":\"0101\",\"PageIndex\":1,\"PageSize\":10,\"ResultType\":\"1,2,4\",\"PaymentType\":\"All\"}}";
-        String appkey = "97f1f3804a9388663067f0eb04c21281";
+        String appkey = "97f1f3804a9388663067f0eb04c2128";
         String secretKey = "431d6af690d323f99bd816215b30b156";
         String md5 = getMD5(timestamp + getMD5(data + appkey) + secretKey);
         System.err.println("加密后的值:"+md5);
