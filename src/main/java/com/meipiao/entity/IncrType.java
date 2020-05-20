@@ -33,6 +33,7 @@ public enum IncrType {
         System.out.println("通过枚举获取的值："+incrType3);
         System.out.println("通过枚举获取的值："+incrType4);
         System.out.println("通过枚举获取的值："+incrType5);
+        System.out.println("end");
     }
 }
 
