@@ -34,6 +34,8 @@
 
 *result:* 统一返回结果
 
+*entity:* 实体类&枚举类
+
 *java8新特性:* [基础教学](https://www.runoob.com/java/java8-new-features.html)
  - java8DateTime: 日期时间 API
  - Lambda.java: Lambda表达式
