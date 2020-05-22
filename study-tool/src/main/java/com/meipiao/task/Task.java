@@ -16,7 +16,7 @@ public class Task {
      * 每一秒中执行以下改方法
      * cron是用来指定执行的 秒，分钟，日期等
      */
-    @Scheduled(cron="0/10 * * * * *")
+//    @Scheduled(cron="0/10 * * * * *")
     public void task(){
         //调用接口，定时执行
         System.out.println("需要执行的任务");
