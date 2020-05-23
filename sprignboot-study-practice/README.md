@@ -27,3 +27,12 @@ Mapped Statements collection already contains value for
 ---
 如再配置mysql添加config文件配置连接信息，而连接其他数据时，则需额导入相应的jar包
 
+---
+```
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.ibatis.reflection.Reflector (file:/D:/MavenRepository/org/mybatis/mybatis/3.4.2/mybatis-3.4.2.jar) to method java.lang.Object.finalize()
+WARNING: Please consider reporting this to the maintainers of org.apache.ibatis.reflection.Reflector
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+```
+非法反射警告错误
