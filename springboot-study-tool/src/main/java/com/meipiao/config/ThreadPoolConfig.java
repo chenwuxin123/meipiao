@@ -5,6 +5,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 
 /**
@@ -13,11 +15,13 @@ import java.util.concurrent.ThreadPoolExecutor;
  * @Date: 2020/5/15 8:41
  */
 @Configuration
-@EnableAsync
 public class ThreadPoolConfig {
-
-    public static final Integer poolSize = 10;                      //线程池大小
-    public static final String threadNamePrefix = "incrementDataExecutor-";  //线程池名的前缀
+    /*
+     *  可以通过配置文件获取值，因为想修改值的话只需要更改配置文件就Ok
+     *    如果想监控线程池的信息的话，只需要在ThreadPoolController将线程池注入，get想要获取的值就Ok
+     */
+    public  Integer poolSize = 10;                      //线程池大小
+    public  String threadNamePrefix = "incrementDataExecutor-";  //线程池名的前缀
 
     @Bean("taskExecutor")
     public ThreadPoolTaskScheduler taskExecutor(){
