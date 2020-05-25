@@ -2,10 +2,12 @@ package com.example.practice.controller;
 
 import com.example.practice.entity.Test;
 import com.example.practice.service.TestService;
-import org.springframework.transaction.annotation.Transactional;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -32,7 +34,6 @@ public class TestController {
         System.out.println("Coming....");
         List<Test> tests = testService.queryAll();
         return tests;
-
     }
 
 }

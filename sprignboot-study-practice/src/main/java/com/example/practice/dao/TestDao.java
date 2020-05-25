@@ -1,6 +1,7 @@
 package com.example.practice.dao;
 
 import com.example.practice.entity.Test;
+import com.github.pagehelper.Page;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -42,6 +43,13 @@ public interface TestDao {
      */
     @Select("select * from test where id = 1")
     List<Test> queryAll();
+
+    /**
+     * 分页查询
+     * @return
+     */
+    @Select("select * from test where id = 1")
+    Page<Test> queryByPage();
 
     /**
      * 新增数据
