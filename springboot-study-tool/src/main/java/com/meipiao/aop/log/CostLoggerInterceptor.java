@@ -16,8 +16,8 @@ import java.lang.reflect.Method;
  * @Author: Chenwx
  * @Date: 2020/5/23 10:06
  */
-@Component
-@Aspect
+//@Component
+//@Aspect
 public class CostLoggerInterceptor {
 
     private static final Logger logger = LoggerFactory.getLogger(CostLoggerInterceptor.class);

@@ -7,8 +7,7 @@ import com.meipiao.redis.RedisUtil;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @Author: Chenwx
@@ -117,5 +116,22 @@ public class RedisController {
         Object data = redisUtil.hget("incredata", "40101008");
         System.err.println("获取的数据"+data);
         return "success";
+    }
+
+    @RequestMapping("/qqqqqqq")
+    public List qqqqqq(){
+        ArrayList<HashMap> objects = new ArrayList<>();
+
+        HashMap<Object, Object> map1 = new HashMap<>();
+        map1.put("1",1);
+        map1.put("2",12);
+        map1.put("a",992);
+        HashMap<Object, Object> map2 = new HashMap<>();
+        map2.put("1",1);
+        map2.put("2",12);
+        map2.put("a",992);
+        objects.add(map1);
+        objects.add(map2);
+        return objects;
     }
 }

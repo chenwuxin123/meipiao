@@ -14,8 +14,8 @@ import org.springframework.validation.BindingResult;
  */
 //利用aop完成统一的数据校验，数据校验出错就返回给前端错误提示
 @Slf4j
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class DataValidAspect {
     /**
      * 目标方法的异常，一般都需要再次抛出去，让别人感知。

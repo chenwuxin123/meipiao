@@ -16,8 +16,8 @@ import java.util.Arrays;
  * @Author: Chenwx
  * @Date: 2020/5/23 10:14
  */
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class AopLog {
     //使用org.slf4j.Logger,这是Spring实现日志的方法
     private final static Logger logger = LoggerFactory.getLogger(AopLog.class);
