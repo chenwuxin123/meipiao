@@ -52,6 +52,7 @@ public class MongodbController {
         System.err.println("拉取结束....");
         for (BasicDBObject basicDBObject : count) {
             Map map = basicDBObject.toMap();
+            System.err.println(map.toString());
         }
 
 //        Aggregation aggregation = Aggregation.newAggregation(
@@ -75,7 +76,7 @@ public class MongodbController {
         Criteria criteria = Criteria.where("Task.CompleteTime").gt(startTime).lt(endTime);
 
         Aggregation aggregation = Aggregation.newAggregation(Aggregation.match(criteria),
-                        countOperationBuilder.as("count"));
+                countOperationBuilder.as("count"));
         System.err.println("开始拉取数据....");
         AggregationResults<BasicDBObject> count = mongoTemplate.aggregate(aggregation, "Spider_HotelsPrice", BasicDBObject.class);
         System.err.println("拉取结束....");
@@ -86,5 +87,27 @@ public class MongodbController {
         return "success";
     }
 
+    @GetMapping("/cwx")
+    public String cwx() {
 
+        DateTime endTime = new DateTime();
+        DateTime startTime = endTime.minusDays(1);
+
+        CountOperation.CountOperationBuilder countOperationBuilder = new CountOperation.CountOperationBuilder();
+
+        Criteria criteria = Criteria.where("RoomCount").gt(0).and("LastSpiderTime").gt(startTime);
+
+        Aggregation aggregation = Aggregation.newAggregation(Aggregation.match(criteria),
+                countOperationBuilder.as("count"));
+
+        System.err.println(aggregation.toString());
+        System.err.println("开始拉取数据....");
+        AggregationResults<BasicDBObject> count = mongoTemplate.aggregate(aggregation, "Spider_Expedia_Price", BasicDBObject.class);
+        System.err.println("拉取结束....");
+        for (BasicDBObject basicDBObject : count) {
+            Map map = basicDBObject.toMap();
+            System.err.println(map.toString());
+        }
+        return "success";
+    }
 }
