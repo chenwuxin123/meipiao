@@ -7,9 +7,9 @@ import java.time.*;
  * @Date: 2020/5/11 10:50
  * @Des: Java 8 日期时间 API
  */
-public class java8DateTime {
+public class Java8DateTime {
     public static void main(String[] args) {
-        java8DateTime java8DateTime = new java8DateTime();
+        Java8DateTime java8DateTime = new Java8DateTime();
         System.out.println("时间显示为白色字体,时区相关为红色字体");
         System.out.println("---------------------------------");
         java8DateTime.testLocalDateTime();
