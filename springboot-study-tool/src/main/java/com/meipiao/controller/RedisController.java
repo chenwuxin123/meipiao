@@ -3,6 +3,7 @@ package com.meipiao.controller;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.meipiao.entity.Person;
 import com.meipiao.redis.RedisUtil;
 import org.springframework.web.bind.annotation.*;
 
@@ -119,19 +120,23 @@ public class RedisController {
     }
 
     @RequestMapping("/qqqqqqq")
-    public List qqqqqq(){
-        ArrayList<HashMap> objects = new ArrayList<>();
-
-        HashMap<Object, Object> map1 = new HashMap<>();
-        map1.put("1",1);
-        map1.put("2",12);
-        map1.put("a",992);
-        HashMap<Object, Object> map2 = new HashMap<>();
-        map2.put("1",1);
-        map2.put("2",12);
-        map2.put("a",992);
-        objects.add(map1);
-        objects.add(map2);
-        return objects;
+    public String qqqqqq(){
+        Person person = new Person();
+        person.setId(11);
+        person.setAge(15);
+        person.setName("sam");
+        boolean sam = redisUtil.set("sam", person);
+        if(sam){
+            return "success";
+        }
+        return "fail";
     }
+
+    @RequestMapping("/getget")
+    public String getget(){
+       redisUtil.hdel("blacklist","119","sam");
+       redisUtil.hset("blacklist","","");
+        return "success";
+    }
+
 }
