@@ -46,6 +46,8 @@
 
 *RabbitMQ*: [此demo单独开启，内附双数据源配置，点击跳转](https://github.com/chenwuxin123/listener)
 
+*indexInfo*: 关于索引的知识
+
 ### About pom.xml files
 <font color="warning">使用私人工具包，请添加镜像:</font>
 
