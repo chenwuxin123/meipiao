@@ -2,6 +2,8 @@ package com.meipiao.index;
 
 import io.swagger.models.auth.In;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -89,9 +91,13 @@ public class IndexInfo {
 
         NOT IN和操作都不会使用索引将进行全表扫描。NOT IN可以NOT EXISTS代替，id3则可使用id>3 or id
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         ConcurrentHashMap<Object, Object> map = new ConcurrentHashMap<>();
         IndexInfo indexInfo = new IndexInfo();
+        Date date = new Date(System.currentTimeMillis() + 60000 * 60 * 8);
+        String currentTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
+        System.out.println(currentTime);
+
 
 
     }
