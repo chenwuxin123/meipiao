@@ -51,6 +51,8 @@
 *lock*: 锁
 
 *utils-AddressUtil*：获取ip地址 输出格式:`马来西亚|0|0|0|0` or `内网IP|0|0|内网IP|内网IP`..使用此方法  添加依赖 以及ip2region.db文件
+
+*exception*：异常状态码
 ```
         <dependency>
             <groupId>org.lionsoul</groupId>

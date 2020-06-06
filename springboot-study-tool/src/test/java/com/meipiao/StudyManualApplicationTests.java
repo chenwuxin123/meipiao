@@ -1,12 +1,9 @@
 package com.meipiao;
 
-import com.meipiao.annotation.MyField;
-import com.meipiao.annotation.MyFieldTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.lang.reflect.Field;
-import java.util.concurrent.ConcurrentHashMap;
 
 @SpringBootTest
 class StudyManualApplicationTests {
