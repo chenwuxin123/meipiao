@@ -50,6 +50,19 @@
 
 *lock*: 锁
 
+*utils-AddressUtil*：获取ip地址 输出格式:`马来西亚|0|0|0|0` or `内网IP|0|0|内网IP|内网IP`..使用此方法  添加依赖 以及ip2region.db文件
+```
+        <dependency>
+            <groupId>org.lionsoul</groupId>
+            <artifactId>ip2region</artifactId>
+            <version>1.7</version>
+        </dependency>
+```
+
+*utils-BrowserUtil*：获取来访者的浏览器版本
+
+*utils-IPUtil*: 使用 Nginx等反向代理软件， 则不能通过 request.getRemoteAddr()获取 IP地址
+
 ### About pom.xml files
 <font color="warning">使用私人工具包，请添加镜像:</font>
 
