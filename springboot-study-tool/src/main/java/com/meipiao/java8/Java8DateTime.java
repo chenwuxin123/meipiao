@@ -1,5 +1,7 @@
 package com.meipiao.java8;
 
+import com.alibaba.fastjson.JSONObject;
+
 import java.time.*;
 
 /**
@@ -15,10 +17,29 @@ public class Java8DateTime {
         java8DateTime.testLocalDateTime();
         System.out.println("---------------------------------");
         java8DateTime.testZonedDateTime();
+        System.out.println("---------------------------------");
+        System.out.println("---------------------------------");
+        System.out.println("---------------------------------");
 
+        String str = "{\n" +
+                "\t\"AID\": 1,\n" +
+                "\t\"SID\": 50,\n" +
+                "\t\"Access_Token\": \"02856107c8594d21aaf5cdfb563e875\",\n" +
+                "\t\"Expires_In\": 597,\n" +
+                "\t\"Refresh_Token\": \"c24rngwlriasdfsga7357ee613e500ee\"\n" +
+                "}";
+        JSONObject result = JSONObject.parseObject(str);
 
+        Integer errCode = result.getInteger("ErrCode");
+        if(errCode == null ){
+            System.out.println("aaaa");
+        }
 
-
+        if(true || false){
+            System.out.println("1");
+        }else{
+            System.out.println("2");
+        }
     }
 
     public void testLocalDateTime(){

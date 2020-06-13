@@ -10,6 +10,8 @@ import org.springframework.data.mongodb.core.aggregation.AggregationResults;
 import org.springframework.data.mongodb.core.aggregation.CountOperation;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
@@ -24,6 +26,7 @@ import java.util.Map;
  * @Date: 2020/5/27 8:08
  */
 @RestController
+@RequestMapping("/mo")
 public class MongodbController {
 
     @Autowired
@@ -108,6 +111,17 @@ public class MongodbController {
             Map map = basicDBObject.toMap();
             System.err.println(map.toString());
         }
+        return "success";
+    }
+
+    @RequestMapping("/save")
+    public String save(){
+        System.err.println("coming");
+        SpiderTask spiderTask = new SpiderTask();
+        spiderTask.setChannel("Test");
+        spiderTask.setName("test");
+        spiderTask.setPeriod(2222222);
+        mongoTemplate.insert(spiderTask,"Spider_SpiderTask");
         return "success";
     }
 }

@@ -8,6 +8,7 @@ import com.meipiao.redis.RedisUtil;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.swing.text.html.parser.Entity;
 import java.util.*;
 
 /**
@@ -29,7 +30,7 @@ public class RedisController {
     }
 
     @GetMapping("/test/{key}")
-    public String test(@PathVariable String key){
+    public String test(@PathVariable String key) {
         String data = null;
         List<Object> objects = redisUtil.lGet(key, 1, 1);
         for (Object object : objects) {
@@ -63,7 +64,7 @@ public class RedisController {
     }
 
     @RequestMapping("/aaaaa")
-    public String aaaaa(){
+    public String aaaaa() {
         String json = "{\n" +
                 "    \"Code\": \"0\",\n" +
                 "    \"Result\": {\n" +
@@ -115,27 +116,58 @@ public class RedisController {
         }
 
         Object data = redisUtil.hget("incredata", "40101008");
-        System.err.println("获取的数据"+data);
+        System.err.println("获取的数据" + data);
         return "success";
     }
 
     @RequestMapping("/qqqqqqq")
-    public String qqqqqq(){
+    public String qqqqqq() {
         Person person = new Person();
         person.setId(11);
         person.setAge(15);
         person.setName("sam");
         boolean sam = redisUtil.set("sam", person);
-        if(sam){
+        if (sam) {
             return "success";
         }
         return "fail";
     }
 
     @RequestMapping("/getget")
-    public String getget(){
-       redisUtil.hdel("blacklist","119","sam");
-       redisUtil.hset("blacklist","","");
+    public String getget() {
+        redisUtil.del("b");
+        return "success";
+    }
+
+    @RequestMapping("/token")
+    public String token() {
+        String str = "{\n" +
+                "\t\"AID\": 1,\n" +
+                "\t\"SID\": 50,\n" +
+                "\t\"Access_Token\": \"02856107c8594d21aaf5cdfb563e875\",\n" +
+                "\t\"Expires_In\": 597,\n" +
+                "\t\"Refresh_Token\": \"c24rngwlriasdfsga7357ee613e500ee\"\n" +
+                "}";
+        JSONObject result = JSONObject.parseObject(str);
+        //将返回的token信息存储到redis中
+        String access_token = result.getString("Access_Token");
+        Integer expires_in = result.getInteger("Expires_In");  //过期时间 s
+        String refresh_token = result.getString("Refresh_Token");
+        redisUtil.hset("ctrip:token", access_token, refresh_token, expires_in);
+
+        return "success";
+    }
+
+    @RequestMapping("/token/get")
+    public String getToken() {
+        Map<Object, Object> get = redisUtil.hmget("a");
+        for (Map.Entry<Object, Object> entry : get.entrySet()) {
+            Object key = entry.getKey();
+            Object value = entry.getValue();
+            System.err.println("key:" + key + "value:" + value);
+        }
+        redisUtil.hdel("a","12");
+        redisUtil.hset("a","cwx","ly");
         return "success";
     }
 
