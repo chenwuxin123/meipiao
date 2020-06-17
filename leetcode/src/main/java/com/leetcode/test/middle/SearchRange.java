@@ -1,4 +1,4 @@
-package com.leetcode.test.easy;
+package com.leetcode.test.middle;
 
 /**
  * @Author: Chenwx
@@ -29,7 +29,7 @@ public class SearchRange {
 
      */
     private int[] searchRange(int[] nums, int target) {
-        int[] res = new int[2];
+        int[] res = new int[]{-1,-1};
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == target) {
                 res[0] = i;
@@ -39,10 +39,11 @@ public class SearchRange {
                         return res;
                     }
                 }
-                return new int[]{i, i};
+                res[1] = i;
+                return res;
             }
         }
-        return new int[]{-1, -1};
+        return res;
     }
 
     /**
