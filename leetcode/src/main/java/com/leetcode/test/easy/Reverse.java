@@ -1,4 +1,4 @@
-package com.leetcode.test;
+package com.leetcode.test.easy;
 
 /**
  * @Author: Chenwx
@@ -15,7 +15,7 @@ public class Reverse {
     //给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
     //
     //示例 : 输入: 120 输出: 21
-    public int reverse(int x) {
+    private int reverse(int x) {
         int res = 0;
         while (x != 0) {
             int remainder = x % 10;

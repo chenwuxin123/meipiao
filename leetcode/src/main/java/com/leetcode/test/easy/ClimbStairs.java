@@ -1,4 +1,4 @@
-package com.leetcode.test;
+package com.leetcode.test.easy;
 
 /**
  * @Author: Chenwx
@@ -15,7 +15,7 @@ public class ClimbStairs {
     //假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
     //
     //每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
-    public int climbStairs(int n) {
+    private int climbStairs(int n) {
         int dp[] = new int[n + 1];
         if (n == 1) {
             return 1;
@@ -29,6 +29,14 @@ public class ClimbStairs {
         }
         return dp[n];
     }
+
+    /**
+     * 解题思路：
+     * 1.递归 ：climbStairs(int n) = climbStairs(int n - 1) + climbStairs(n - 2); 不推荐
+     *
+     * 2.动态规划(DP)
+     *
+     */
 }
 
 
