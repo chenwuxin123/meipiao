@@ -116,7 +116,6 @@ public class MongodbController {
 
     @RequestMapping("/save")
     public String save(){
-        System.err.println("coming");
         SpiderTask spiderTask = new SpiderTask();
         spiderTask.setChannel("Test");
         spiderTask.setName("test");

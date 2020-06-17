@@ -1,12 +1,17 @@
 package com.meipiao.thread;
 
 import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
@@ -25,7 +30,10 @@ public class ThreadController {
         for (Object hotelId : hotelIds) {
             String name = Thread.currentThread().getName();
             System.err.println("线程:" + name + "正在拉取数据: " + hotelId);
-            Thread.sleep(5000);//模拟正在执行任务
+            double random = Math.random()*10000;
+            double ceil = Math.ceil(random);
+            int i = new Double(ceil).intValue();
+            Thread.sleep(i);//模拟正在执行任务
             System.err.println("线程:" + name + "   数据:" + hotelId + " 拉取完毕!");
         }
 
@@ -33,8 +41,9 @@ public class ThreadController {
 
     @RequestMapping("/start")
     public void start() {
+        int threadCount = 9;//线程数
         //创建只有3个线程的线程池
-        ThreadPoolExecutor executorService = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
+        ThreadPoolExecutor executorService = (ThreadPoolExecutor) Executors.newFixedThreadPool(threadCount);
         //根据需要拉取的数据平均分配给每个线程(例如3个线程总共查询到共有300个酒店id待拉取，每个线程分配100个酒店id 实现异步拉取数据)
         //先从mongodb中查询到所有的id的数量 all在%ThreadCount = count
         ArrayList<String> list = new ArrayList<>();
@@ -48,7 +57,7 @@ public class ThreadController {
         list.add("aa8");
         list.add("aa9");
         list.add("aa10");
-        int threadCount = 3;//线程数
+
         //解析list 均等分给线程
         int total = list.size();
         int copy = total / threadCount;
@@ -67,6 +76,7 @@ public class ThreadController {
                 }
             });
         }
+        executorService.shutdown();
     }
 
 }
