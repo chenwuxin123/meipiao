@@ -12,9 +12,12 @@
 
 ⌘ sprignboot-study-practice：实操
    * [sprignboot-study-practice](https://github.com/chenwuxin123/study-manual/tree/master/sprignboot-study-practice)
-   
+
+⌘ spirngboot-study-login：权限登录
+   * [spirngboot-study-login](https://https://github.com/chenwuxin123/study-manual/tree/master/spirngboot-study-login)
+
 ⌘ leetcode: leetcode刷题
-
-
+  * [leetcode刷题](https://github.com/chenwuxin123/study-manual/tree/master/leetcode)
+ 
  
 
