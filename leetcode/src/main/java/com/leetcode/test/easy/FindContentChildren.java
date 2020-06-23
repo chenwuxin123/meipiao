@@ -1,6 +1,7 @@
 package com.leetcode.test.easy;
 
 import java.util.Arrays;
+import java.util.concurrent.CopyOnWriteArraySet;
 
 /**
  * @Author: Chenwx
