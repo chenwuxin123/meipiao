@@ -126,7 +126,7 @@
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>3.17</version>
+            <version>4.1.1</version>
         </dependency>
         <!--Excel导入导出工具（简单、好用且轻量级的海量Excel文件导入导出解决方案.）-->
         <dependency>
